@@ -3,19 +3,18 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Light background */
+    background-color: #faf0e6; /* Light background for a soft look */
     color: #333;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background: linear-gradient(135deg, #f8e1d4 30%, #f3d5e6 70%); /* Feminine base colors */
+    background: #fff; /* White background for contrast */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 header {
@@ -24,14 +23,14 @@ header {
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
-    color: #a55a8b; /* Elegant pinkish hue */
+    font-size: 2.8em;
+    color: #a55a8b; /* Soft pink color */
 }
 
 .intro {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 10px;
-    color: #b27c9b; /* Softer pink for intro text */
+    color: #b27c9b;
 }
 
 main {
@@ -41,29 +40,25 @@ main {
 }
 
 .about, .social, .gallery {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 h2 {
     font-size: 1.8em;
-    color: #a55a8b; /* Consistent color for section headers */
-}
-
-.gallery {
-    text-align: center;
+    color: #a55a8b; /* Matching header color */
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px; /* Space between images */
-    margin-top: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Flex layout */
+    gap: 20px;
 }
 
 .gallery-grid img {
-    width: 100%; /* Make images responsive */
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
 }
 
 .social-icon {
@@ -74,14 +69,14 @@ h2 {
 .social-icon img {
     width: 48px;
     height: 48px;
-    transition: transform 0.2s; /* Smooth hover effect */
+    transition: transform 0.2s ease;
 }
 
 .social-icon img:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.2); /* Simple hover effect */
 }
 
-/* Optional background elements */
+/* Optional background decorations */
 .container::before {
     content: "";
     background-image: url('https://img.icons8.com/material-outlined/100/000000/flower.png'); /* Example flower */
@@ -90,8 +85,8 @@ h2 {
     height: 150px;
     top: 10%;
     left: 5%;
-    opacity: 0.2; /* Light opacity for subtle effect */
-    z-index: 0; /* Background behind other elements */
+    opacity: 0.2;
+    z-index: 0;
 }
 
 .container::after {
@@ -102,6 +97,6 @@ h2 {
     height: 120px;
     bottom: 10%;
     right: 5%;
-    opacity: 0.2; /* Light opacity for subtle effect */
-    z-index: 0; /* Background behind other elements */
+    opacity: 0.2;
+    z-index: 0;
 }
