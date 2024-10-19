@@ -1,15 +1,23 @@
-// script.js
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', () => {
+    // Add smooth scrolling to gallery items
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-// Smooth scrolling effect for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Open the image in a modal (or any other functionality)
+            alert('You clicked on: ' + item.querySelector('h3').innerText);
+        });
+    });
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    // Example of an image hover effect
+    galleryItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'scale(1.02)';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'scale(1)';
         });
     });
 });
-
-// Add more interactivity as desired
-// For instance, you could implement a lightbox effect when clicking on paintings
