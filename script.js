@@ -1,11 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Add functionality for share buttons (if implemented)
-    const shareButtons = document.querySelectorAll('.share-btn');
-    shareButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const paintingTitle = this.dataset.title;
-            const shareUrl = `Check out this amazing painting: ${paintingTitle} by Artsy by Diana!`;
-            alert(shareUrl);  // Replace with actual sharing functionality
+// script.js
+
+// Smooth scrolling effect for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
 });
+
+// Add more interactivity as desired
+// For instance, you could implement a lightbox effect when clicking on paintings
