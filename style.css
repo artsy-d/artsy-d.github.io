@@ -81,7 +81,7 @@ h2 {
     transform: scale(1.1); /* Scale up on hover */
 }
 
-/* Optional background elements (if needed) */
+/* Optional background elements */
 .container::before {
     content: "";
     background-image: url('https://img.icons8.com/material-outlined/100/000000/flower.png'); /* Example flower */
@@ -105,4 +105,3 @@ h2 {
     opacity: 0.2; /* Light opacity for subtle effect */
     z-index: 0; /* Background behind other elements */
 }
-
