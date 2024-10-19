@@ -1,119 +1,69 @@
-/* General styles */
-* {
+body {
+    font-family: 'Serif', sans-serif;
+    background-color: #fce4ec; /* Light pink background */
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Playfair Display', serif;
-    background-color: #FDEAE7; /* Pastel pink */
-    color: white;
-    text-align: center;
+    position: relative;
 }
 
 header {
-    background-color: #FDEAE7; /* Pastel pink */
-    padding: 30px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.header-content h1 {
-    font-size: 3rem;
-    color: white;
-    position: relative;
-}
-
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icon {
-    width: 35px;
-    height: 35px;
-    margin-top: 10px;
-}
-
-#gallery h2 {
-    font-size: 2.5rem;
-    color: white;
-    margin: 40px 0 20px;
-}
-
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    text-align: center;
     padding: 20px;
 }
 
-.gallery-item {
-    background-color: #E2F4DC; /* Pastel green */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    max-width: 300px;
-    max-height: 400px;
-    overflow: hidden;
+h1 {
+    font-size: 3rem;
+    color: #d81b60; /* Darker pink for the title */
+    margin: 10px 0;
 }
 
-.gallery-item img {
+.instagram-icon {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    padding: 20px;
+}
+
+.painting {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
-.gallery-item h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.gallery-item:hover {
+.painting:hover {
     transform: scale(1.05);
 }
 
 footer {
-    background-color: #FDEAE7; /* Pastel pink */
+    text-align: center;
     padding: 20px;
-    margin-top: 50px;
-    color: white;
+    font-size: 0.9rem;
 }
 
-footer p {
-    font-size: 1rem;
-}
-
-/* Flowers and stars in the background of the header */
-header::before, header::after {
-    content: "🌸 ⭐";
-    font-size: 25px;
+/* Background decorations */
+body::before, body::after {
+    content: '💖⭐'; /* Cute pink flower and star emoji */
     position: absolute;
-    animation: float 5s infinite alternate ease-in-out;
-    z-index: 1;
-    opacity: 0.6;
+    font-size: 3rem;
+    opacity: 0.1;
 }
 
-header::before {
-    left: 20%;
-    top: 10px;
-    animation-duration: 7s;
+body::before {
+    top: 20%;
+    left: 10%;
 }
 
-header::after {
-    left: 70%;
-    top: 40px;
-    animation-duration: 6s;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(20px);
-    }
+body::after {
+    bottom: 20%;
+    right: 10%;
 }
