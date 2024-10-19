@@ -40,13 +40,30 @@ main {
     border-radius: 10px;
 }
 
-.about, .social {
+.about, .social, .gallery {
     margin: 20px 0;
 }
 
 h2 {
     font-size: 1.8em;
     color: #a55a8b; /* Consistent color for section headers */
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* Space between images */
+    margin-top: 10px;
+}
+
+.gallery-grid img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .social-icon {
@@ -64,21 +81,28 @@ h2 {
     transform: scale(1.1); /* Scale up on hover */
 }
 
-/* Optional background elements */
+/* Optional background elements (if needed) */
 .container::before {
-    content: "♥"; /* Heart symbol */
+    content: "";
+    background-image: url('https://img.icons8.com/material-outlined/100/000000/flower.png'); /* Example flower */
     position: absolute;
-    font-size: 100px;
-    color: rgba(255, 182, 193, 0.2); /* Light pink */
+    width: 150px;
+    height: 150px;
     top: 10%;
     left: 5%;
+    opacity: 0.2; /* Light opacity for subtle effect */
+    z-index: 0; /* Background behind other elements */
 }
 
 .container::after {
-    content: "🌸"; /* Flower symbol */
+    content: "";
+    background-image: url('https://img.icons8.com/material-outlined/100/000000/heart.png'); /* Example heart */
     position: absolute;
-    font-size: 120px;
-    color: rgba(255, 182, 193, 0.2); /* Light pink */
+    width: 120px;
+    height: 120px;
     bottom: 10%;
     right: 5%;
+    opacity: 0.2; /* Light opacity for subtle effect */
+    z-index: 0; /* Background behind other elements */
 }
+
