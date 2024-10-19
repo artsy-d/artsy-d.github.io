@@ -1,4 +1,4 @@
-/* General Reset */
+/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,124 +6,114 @@
 }
 
 body {
-    font-family: 'Playfair Display', serif; /* Elegant font */
-    background-color: #ffcccb; /* Pastel pink background */
+    font-family: 'Playfair Display', serif;
+    background-color: #FDEAE7; /* Pastel pink */
     color: white;
-    line-height: 1.6;
-    position: relative;
-    background-image: 
-        url('https://twemoji.maxcdn.com/v/latest/72x72/1f338.png'), /* Pink flowers 🌸 */
-        url('https://twemoji.maxcdn.com/v/latest/72x72/2b50.png');  /* Golden stars ⭐ */
-    background-position: 
-        5% 10%, 85% 15%, 25% 60%, 75% 70%; /* Scattered positions */
-    background-repeat: repeat, repeat;
-    background-size: 
-        3rem, /* Flower size 🌸 */
-        1.8rem; /* Smaller star size ⭐ */
+    text-align: center;
 }
 
-/* Centered Header */
 header {
-    background-color: #d1e7dd; /* Pastel green */
-    padding: 50px 0;
-    text-align: center;
+    background-color: #FDEAE7; /* Pastel pink */
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    color: white;
     position: relative;
 }
 
-header h1 {
-    font-size: 3.5em;
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
     color: white;
-    margin-bottom: 10px;
+    margin: 40px 0 20px;
 }
 
-.slogan {
-    font-size: 1.5em;
-    color: white;
-    font-weight: 500;
-}
-
-.social-media {
-    margin-top: 20px;
-}
-
-.social-media a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2em;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-media a:hover {
-    color: #f1a9a0; /* Slight pink hover effect */
-}
-
-main {
-    padding: 40px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: white;
-}
-
-/* Gallery Section */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 30px;
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
 
 .gallery-item {
-    background-color: #d1e7dd; /* Pastel green background for gallery items */
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #E2F4DC; /* Pastel green */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    text-align: center;
+    max-width: 300px;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover; /* Ensures images are symmetrical */
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gallery-item h3 {
-    font-size: 1.5em;
     margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .gallery-item:hover {
-    transform: translateY(-10px); /* Subtle hover effect */
+    transform: scale(1.05);
 }
 
 footer {
-    background-color: #d1e7dd; /* Pastel green footer */
-    text-align: center;
+    background-color: #FDEAE7; /* Pastel pink */
     padding: 20px;
+    margin-top: 50px;
+    color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2.8em;
-    }
+footer p {
+    font-size: 1rem;
+}
 
-    .slogan {
-        font-size: 1.3em;
-    }
+/* Flowers and stars in the background of the header */
+header::before, header::after {
+    content: "🌸 ⭐";
+    font-size: 25px;
+    position: absolute;
+    animation: float 5s infinite alternate ease-in-out;
+    z-index: 1;
+    opacity: 0.6;
+}
 
-    main h2 {
-        font-size: 2em;
-    }
+header::before {
+    left: 20%;
+    top: 10px;
+    animation-duration: 7s;
+}
 
-    .gallery {
-        grid-template-columns: 1fr;
+header::after {
+    left: 70%;
+    top: 40px;
+    animation-duration: 6s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
     }
 }
